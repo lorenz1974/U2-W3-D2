@@ -1,0 +1,21 @@
+.timer {
+    font-size: 4rem;
+}
+
+@media screen and (min-width: 576px) {
+    .timer {
+        font-size: 8rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .timer {
+        font-size: 12rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .timer {
+        font-size: 16rem;
+    }
+}

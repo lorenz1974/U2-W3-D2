@@ -15,17 +15,23 @@ const updateTimer = (startedAt) => {
 
     // Aggiorna il contenuto di timerDiv
     timerDiv.innerText = timerString;
+
+    clickStatus ? clickSound.play() : {}
 }
 
 
 const debuglevel = 3
 const timerDiv = document.getElementById('timer')
 const timerResettedAt = document.getElementById('timerResettedAt')
+const clickSwitch = document.getElementById('clickSwitch')
 const resetButton = document.getElementById('resetButton')
 const stopButton = document.getElementById('stopButton')
 
+const clickSound = new Audio('click.wav')
+
 let intervalId = null
 let startedAt = null
+let clickStatus = false
 
 // Attiva l'evento al caricamento della pagina
 document.addEventListener('DOMContentLoaded', () => {
@@ -79,6 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
         location.reload()
     })
 
+    clickSwitch.addEventListener('change', () => {
+        _W(`CLICK ON: ${clickSwitch.checked}`)
+        clickStatus = clickSwitch.checked
+    })
 
 
 })
