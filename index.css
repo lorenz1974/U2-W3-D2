@@ -1,0 +1,22 @@
+header img {
+    transition: all 2s ease-in-out;
+    position: relative;
+}
+
+header img:hover {
+    animation: zoomToCenter 2s ease-in-out;
+}
+
+@keyframes zoomToCenter {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    50% {
+        transform: scale(5) translate(0, calc(10vh));
+    }
+
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+}
