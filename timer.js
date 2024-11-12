@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         location.reload()
     })
 
+    // Inizializza il clickSwicth
     clickSwitch.addEventListener('change', () => {
         _W(`CLICK ON: ${clickSwitch.checked}`)
         clickStatus = clickSwitch.checked
